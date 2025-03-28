@@ -8,4 +8,5 @@ module.exports = defineConfig({
     specPattern: "./cypress/tests/**.*",
     baseUrl: "https://the-internet.herokuapp.com"
   },
+  defaultCommandTimeout: 4000
 });

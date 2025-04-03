@@ -13,6 +13,17 @@ describe('Handling checkboxes', () => {
         cy.get(CHECKBOXES_SELECTOR).filter(":not([checked])").then(item => {
             cy.get(item).click({multiple: true})
         })
+        //Loop over all checkboxes again and then unselect all
+        cy.get(CHECKBOXES_SELECTOR).filter("[checked]").then(item => {
+            cy.get(item).click({multiple: true})
+        })
+
+        //Select all without filter
+        cy.get(CHECKBOXES_SELECTOR).then(item => {
+            cy.get(item).click({multiple: true})
+        })
+
+
     });
   
 })
